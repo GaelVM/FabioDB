@@ -36,6 +36,7 @@
             </tr>
           </tbody>
         </table>
+        <div id="mensajeDNI" class="text-center mt-3 fw-semibold text-primary"></div>
       </div>
     </div>
   </div>
@@ -57,16 +58,20 @@
         if (!response.ok) throw new Error('Error en la consulta');
 
         const data = await response.json();
+                // Mostrar mensaje con el DNI consultado
+        document.getElementById("mensajeDNI").innerHTML = `
+          Mostrando resultados del DNI: <h6 class="mt-2">${data.numeroDocumento}</h6>
+        `;
         tabla.innerHTML = `
           <tr>
             <td>${data.nombres}</td>
             <td>${data.apellidoPaterno}</td>
             <td>${data.apellidoMaterno}</td>
           </tr>
-           <tr>
+           
             Mostrando resultados de el DNI:
             
-            <h6>${data.numeroDocumento}</h6></tr>
+            <h6>${data.numeroDocumento}</h6>
         `;
       } catch (error) {
         tabla.innerHTML = "<tr><td colspan='3' class='text-danger'>Error al consultar</td></tr>";
