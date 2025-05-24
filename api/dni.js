@@ -11,7 +11,7 @@ module.exports = async (req, res) => {
   try {
     const response = await axios.get(`https://api.apis.net.pe/v2/reniec/dni?numero=${dni}`, {
       headers: {
-        Authorization: `Bearer ${process.env.API_RENIEC_TOKEN}`
+        Authorization: `${process.env.API_RENIEC_TOKEN}`
       }
     });
 
