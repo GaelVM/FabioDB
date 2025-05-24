@@ -1,0 +1,12 @@
+
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/dni.js", "use": "@vercel/node" },
+    { "src": "public/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/dni", "dest": "api/dni.js" },
+    { "src": "/(.*)", "dest": "/public/index.html" }
+  ]
+}
