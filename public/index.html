@@ -94,13 +94,14 @@
         resultadoDiv.textContent =
           `>>> Resultado:
 ` +
-          `DNI: ${data.numeroDocumento}
+          `DNI: ${data.dni}
 ` +
           `Nombres: ${data.nombres}
 ` +
           `Apellido Paterno: ${data.apellidoPaterno}
 ` +
-          `Apellido Materno: ${data.apellidoMaterno}`;
+          `Apellido Materno: ${data.apellidoMaterno}
+` +       `>>> Powered By JrVM`;
       } catch (error) {
         resultadoDiv.textContent = ">>> Error consultando DNI. Intente nuevamente.";
       }
