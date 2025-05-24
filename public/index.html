@@ -115,12 +115,13 @@
 
         const data = await response.json();
         tabla.innerHTML = `
-        DNI: ${data.numeroDocumento}
+        
           <tr>
             <td>${data.nombres}</td>
             <td>${data.apellidoPaterno}</td>
             <td>${data.apellidoMaterno}</td>
           </tr>
+          DNI: ${data.numeroDocumento}
 
 
         `;
