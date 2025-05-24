@@ -3,38 +3,49 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Terminal DNI Lookup</title>
+  <title>Busqueda Reniec</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
+<style>
     body {
       background-color: #000;
       color: #00ff00;
       font-family: 'Courier New', Courier, monospace;
-      padding: 20px;
+      padding: 10px;
+      margin: 0;
     }
     input, button {
       background-color: #111;
       color: #0f0;
       border: 1px solid #0f0;
-      padding: 1px;
+      padding: 10px;
       font-family: inherit;
-      margin-top: 10px;
+      font-size: 16px;
       width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
     }
     .container {
-      max-width: 500px;
+      width: 100%;
+      max-width: 100%;
       margin: auto;
     }
     .terminal-box {
       border: 1px solid #0f0;
-      padding: 20px;
-      margin-top: 30px;
+      padding: 15px;
+      margin-top: 20px;
     }
     .hidden {
       display: none;
     }
     .error {
       color: red;
+    }
+    h3 {
+      font-size: 20px;
+      text-align: center;
+    }
+    pre {
+      font-size: 14px;
     }
   </style>
 </head>
