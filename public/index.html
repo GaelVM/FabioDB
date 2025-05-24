@@ -28,10 +28,7 @@
               <th>Apellido Paterno</th>
               <th>Apellido Materno</th>
             </tr>
-            <br>
-            Mostrando resultados de el DNI:
-            
-            <h6>${data.numeroDocumento}</h6>
+           
           </thead>
           <tbody id="resultadoTabla">
             <tr>
@@ -66,6 +63,10 @@
             <td>${data.apellidoPaterno}</td>
             <td>${data.apellidoMaterno}</td>
           </tr>
+           <br>
+            Mostrando resultados de el DNI:
+            
+            <h6>${data.numeroDocumento}</h6>
         `;
       } catch (error) {
         tabla.innerHTML = "<tr><td colspan='3' class='text-danger'>Error al consultar</td></tr>";
