@@ -115,11 +115,14 @@
 
         const data = await response.json();
         tabla.innerHTML = `
+        DNI: ${data.nombre}
           <tr>
             <td>${data.nombres}</td>
             <td>${data.apellidoPaterno}</td>
             <td>${data.apellidoMaterno}</td>
           </tr>
+
+
         `;
       } catch (error) {
         tabla.innerHTML = "<tr><td colspan='3' class='text-danger'>Error al consultar</td></tr>";
